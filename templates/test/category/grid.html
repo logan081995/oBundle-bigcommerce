@@ -1,0 +1,11 @@
+<div class="add-remove-buttons" data-category-id="{{category.id}}">
+        <button class="button button--primary add-all-to-cart">Add All To Cart</button>
+        <button class="button button--primary remove-all-items" style="display:none;">Remove All Items</button>
+</div>
+<ul class="productGrid">
+        {{#each products}}
+        <li class="product">
+                {{>test/category/card settings=../settings show_compare=../show_compare show_rating=../settings.show_product_rating theme_settings=../theme_settings customer=../customer event=../event position=(add @index 1)  image_hover=(lookup images 1)}}
+        </li>
+        {{/each}}
+</ul>
